@@ -31,12 +31,13 @@ pipeline {
             agent {
                 docker {
                     image 'node:20-alpine'
+                    args '-u root'
                 }
             }
             steps {
                 dir('frontend') {
-                    sh 'node -v'
-                    sh 'npm -v'
+                    sh 'rm -rf node_modules package-lock.json'
+                    sh 'npm cache clean --force'
                     sh 'npm install'
                     sh 'npm run build'
                 }
