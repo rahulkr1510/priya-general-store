@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/rahulkr1510/priya-general-store.git'
-            }
-        }
-
         stage('Backend Build') {
             steps {
                 dir('backend') {
