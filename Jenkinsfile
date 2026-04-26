@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/priya-general-store.git'
+                git 'https://github.com/rahulkr1510/priya-general-store.git'
             }
         }
 
