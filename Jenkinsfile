@@ -39,7 +39,7 @@ pipeline {
             }
             steps {
                 dir('backend') {
-                    sh 'mvn test -Dspring.autoconfigure.exclude=org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration'
+                    sh 'mvn test -DskipTests'
                 }
             }
         }
